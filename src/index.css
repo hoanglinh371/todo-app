@@ -1,13 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #fafafa url('./assets/bg-mobile-light.jpg') no-repeat;
+  background-size: contain;
+  transition: all 0.2s linear;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.dark body {
+  background: #171823 url('./assets/bg-mobile-dark.jpg') no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 640px) {
+  body {
+    background: #fafafa url('./assets/bg-desktop-light.jpg') no-repeat;
+    background-size: contain;
+  }
+
+  .dark body {
+    background: #171823 url('./assets/bg-desktop-dark.jpg') no-repeat;
+    background-size: contain;
+  }
 }
